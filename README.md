@@ -75,11 +75,18 @@ Gambar 3.2 Sampel Dataset
 
 Gambar 3.3 Histogram Univariate Analysis
 
+Beberapa parameter seperti volatile acidity, citric acidity, residual sugar, chlorides dan sulphates menunjukkan distribusi yang sangat condong ke kanan, yang berarti sebagian besar *wine* memiliki kadar yang rendah. Sementara itu, parameter seperti fixed acidity, free sulfur dioxide, total sulfur dioxide, pH, dan alcohol menunjukkan distribusi yang lebih terpusat atau mendekati normal. Mayoritas *wine* memiliki kandungan alcohol antara 9% hingga 11%. Bahkan ada beberapa *wine* dengan kandungan alcohol yang lebih tinggi, hingga 14 - 15%. Distribusi density yang terlihat paling mendekati normal berdasarkan histogram di atas. Kemudian ada distribusi quality, yang menunjukkan bahwa sebagian besar *wine* yang dianggap berkualitas sangat rendah atau sangat tinggi. Sebagian besar *wine* memiliki kualitas 5 atau 6, menunjukkan bahwa ini adalah nilai kualitas yang paling umum. Tidak terdapat *wine* dengan kualitas di bawah 3 atau di atas 8. Ini mengindikasikan bahwa sebagian besar wine berada dalam rentang kualitas "rata-rata". 
+
 #### 3.4 Bivariate Analysis 
 
 ![image](https://github.com/user-attachments/assets/df89d236-ad2d-476d-b622-3ef52354a2bb)
 
-Gambar 3.4 Barchat Bivariate Analysis
+Gambar 3.4 Barchart Bivariate Analysis
+
+- Alcohol : Terdapat kecenderungan bahwa *wine* dengan kadar alcohol lebih tinggi cenderung memiliki kualitas yang lebih baik.
+- Sulphates : Kadar sulfat yang lebih tinggi memiliki kualitas yang lebih baik. 
+- Citric acid : Tingkat asam nitrat juga mempengaruhi kualitas dan citric acid yang lebih tinggi cenderung ditemukan pada *wine* berkualitas lebih baik. 
+- Volatile acidity : Anggur dengan kesamaan volatile yang lebih rendah cenderung memiliki kualitas yang lebih baik.
 
 #### 3.5 Correlation Matrix
 
@@ -87,6 +94,17 @@ Gambar 3.4 Barchat Bivariate Analysis
 
 Gambar 3.5 Correlation Matrix
 
+- Quality memiliki hubungan positif antara alcohol.
+- Quality memiliki hubungan negatif lemah antara volitile acidity.
+- Quality tidak memiliki hubungan antara residual sugar, free sulfur dioxide, dan  pH.
+- Alcohol memiliki hubungan positif antara quality dan pH.
+- Alcohol memiliki hubungan negatif antara dencity.
+- Volitile acidity memiliki hubungan positif antara pH.
+- Volitile acidity memiliki hubungan negatif antara citric acidity.
+- Density memiliki hubungan positif antara fixed acidity.
+- Density memiliki hubungan negatif antara density.
+- Citric acid memiliki hubungan positif antara fixed acidity.
+- Citric acid memiliki hubungan negatif antara volitile acidity dan pH.
 
 #### 3.6 Memeriksa Outlier
 
