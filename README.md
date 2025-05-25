@@ -4,28 +4,28 @@
 
 ### 1.1 Latar Belakang 
 
-Wine merupakan salah satu minuman yang mengandung alkohol. Wine memiliki manfaat yang terdapat pada kandungan di dalamnya bagi kesehatan jika dikonsumsi secara tidak berlebihan. Beberapa manfaat wine bagi kesehatan diantaranya untuk mencegah penyakit kanker, memelihara kesehatan otak dan dungsi memori, menjaga kesehatan jantung, menjaga kesehatan gigi dan mulut serta menurunkan kadar gula darah[[1]](https://ejournal.akakom.ac.id/index.php/jiko/article/view/771/pdf). *Red wine* merupakan minuman anggur yang berasal dari buah anggur yang berwarna merah atau hitam. Warna merah yang dihasilkan merupakan hasil yang diperoleh dari pencelupan kulit dan biji ke dalam sari buah yang telah diperas untuk difermentasi dalam jangka waktu yang bervariasi. Di luar negeri *wine* menjadi minuman yang banyak dikonsumsi oleh berbagai lapisan masyarakat, khususnya negara-negara yang memiliki iklim dingin dan bersalju untuk menghangatkan badan. *Wine* memiliki berbagai karakteristik seperti kepadatan, nilai pH, alkohol dan asam lainnya [[2]](https://journal.stekom.ac.id/index.php/Bisnis/article/view/247/182).
-Penilaian kualitas *wine* secara tradisional bergantung pada uji rasa yang dilakukan oleh ahli, yang bisa jadi subjektif dan memakan waktu. Pendekatan berbasis data diperlukan untuk memprediksi kualitas *wine* secara akurat berdasarkan sifat kimia yang terukur, yang dapat membantuk pembuat *wine* dan industri *stakeholder* meningkatkan proses produksi serta mempertahankan standar kualitas yang konsisten. 
-Dedik & Yan Rianto (2024) pada penelitiannya mengevaluasi kinerja sembilan model machine learning dalam memprediksi kualitas *wine* menggunakan dataset dari repositori UCI. Model machine learning yang digunakan adalah Logistic Regression, K-Nearest Neighbor (KNN), Decision Tree, Support Vector Machine (SVM), Random  Forest,  XGBoost,  LightGBM, CatBoost,   dan   Gradient   Boosting [[3]](https://jurnal.upnyk.ac.id/index.php/telematika/article/view/13007/6670). 
-Pada penelitian yang dilakukan terhadap dataset Red Wine Quality dengan membandingkan tiga algoritma yaitu Random Forest, Support Vector Machine (SVM), K-Nearest Neighbor (KNN). 
+*Wine* merupakan salah satu minuman yang mengandung alkohol. *Wine* memiliki manfaat yang terdapat pada kandungan di dalamnya bagi kesehatan jika dikonsumsi secara tidak berlebihan. Beberapa manfaat *wine* bagi kesehatan diantaranya untuk mencegah penyakit kanker, memelihara kesehatan otak dan fungsi memori, menjaga kesehatan jantung, menjaga kesehatan gigi dan mulut serta menurunkan kadar gula darah[[1]](https://ejournal.akakom.ac.id/index.php/jiko/article/view/771/pdf). *Red wine* merupakan minuman anggur yang berasal dari buah anggur yang berwarna merah atau hitam. Warna merah yang dihasilkan merupakan hasil yang diperoleh dari pencelupan kulit dan biji ke dalam sari buah yang telah diperas untuk difermentasi dalam jangka waktu yang bervariasi. Di luar negeri *wine* menjadi minuman yang banyak dikonsumsi oleh berbagai lapisan masyarakat, khususnya negara-negara yang memiliki iklim dingin dan bersalju untuk menghangatkan badan. *Wine* memiliki berbagai karakteristik seperti kepadatan, nilai pH, alkohol dan asam lainnya [[2]](https://journal.stekom.ac.id/index.php/Bisnis/article/view/247/182).
+Penilaian kualitas *wine* secara tradisional bergantung pada uji rasa yang dilakukan oleh ahli, yang bisa jadi subjektif dan memakan waktu. Pendekatan berbasis data diperlukan untuk memprediksi kualitas *wine* secara akurat berdasarkan sifat kimia yang terukur, yang dapat membantu pembuat *wine* dan industri *stakeholder* meningkatkan proses produksi serta mempertahankan standar kualitas yang konsisten.
+Dedik & Yan Rianto (2024) pada penelitiannya mengevaluasi kinerja sembilan model machine learning dalam memprediksi kualitas *wine* menggunakan dataset dari repositori UCI. Model *machine learning* yang digunakan adalah *Logistic Regression*, *K-Nearest Neighbor* (KNN), *Decision Tree*, *Support Vector Machine* (SVM), *Random  Forest*,  *XGBoost*,  *LightGBM*, *CatBoost*,   dan   *Gradient   Boosting* [[3]](https://jurnal.upnyk.ac.id/index.php/telematika/article/view/13007/6670). 
+Pada penelitian ini yang dilakukan terhadap dataset *Red Wine Quality* dengan membandingkan tiga algoritma yaitu *Random Forest*, *Support Vector Machine* (SVM), *K-Nearest Neighbor* (KNN). 
 
 ## 2. Business Understanding
 
 ### 2.1 Problem Statements 
 
-1. Bagaimana memprediksi kualitas wine merah berdasarkan komposisi yang ada di dalamnya?
-2. Kandungan apa yang paling berpengaruh terhadap kualitas dari red wine?
+1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
+2. Kandungan apa yang paling berpengaruh terhadap kualitas dari *red wine*?
 3. Bagaimana membangun sistem prediktif yang mampu mengklasifikasikan *red wine* berdasarkan komposisi atau bahan dengan akurasi yang dapat diandalkan?
 
 ### 2.2 Goals
 1. Mengembangkan model *machine learning* yang dapat memprediksi kualitas *red wine* yang dinilai pada skala 0 sampai 10. 
-2. Memberikan wawasan bagi pembuatn *wine* untuk mengoptimalkan produksi dan meningkatkan kontrol kualitas. 
-3. Membuat dan membandingkan beberapa algoritma klasifikasi seperti Random Forest, Support Vector Machine (SVM) dan K-Nearest Neighbor (KNN).
+2. Memberikan wawasan bagi pembuat *wine* untuk mengoptimalkan produksi dan meningkatkan kontrol kualitas. 
+3. Membuat dan membandingkan beberapa algoritma klasifikasi seperti *Random Forest*, *Support Vector Machine* (SVM) dan *K-Nearest Neighbor* (KNN).
 
 ### 2.3 Solution Statement 
 1. Melakukan analisis data eksplorasi untuk melakukan hubungan antara fitur dan kualitas.
 2. Menggunakan analisis fitur untuk menyoroti faktor-faktor utama yang mendorong kualitas *wine*.
-3. Melatih dan mengevaluasi model klasifikasi Random Forest, Support Vector Machine (SVM), dan K-Nearest Neighhbor (KNN). Dan menggunakan metrik evaluasi seperti accuracy, precision, recall dan f1-score.
+3. Melatih dan mengevaluasi model klasifikasi *Random Forest*, *Support Vector Machine* (SVM), dan *K-Nearest Neighhbor* (KNN). Dan menggunakan metrik evaluasi seperti *accuracy*.
 
 ## 3. Data Understanding
 
@@ -87,10 +87,10 @@ Beberapa parameter seperti volatile acidity, citric acidity, residual sugar, chl
 
 Gambar 4. Barchart Bivariate Analysis
 
-- Alcohol : Terdapat kecenderungan bahwa *wine* dengan kadar alcohol lebih tinggi cenderung memiliki kualitas yang lebih baik.
-- Sulphates : Kadar sulfat yang lebih tinggi memiliki kualitas yang lebih baik. 
-- Citric acid : Tingkat asam nitrat juga mempengaruhi kualitas dan citric acid yang lebih tinggi cenderung ditemukan pada *wine* berkualitas lebih baik. 
-- Volatile acidity : Anggur dengan kesamaan volatile yang lebih rendah cenderung memiliki kualitas yang lebih baik.
+- Alcohol : Terdapat kecenderungan bahwa *wine* dengan kadar alcohol lebih tinggi cenderung memiliki quality yang lebih baik.
+- Sulphates : Kadar sulfat yang lebih tinggi memiliki quality yang lebih baik. 
+- Citric acid : Tingkat asam nitrat juga mempengaruhi quality dan citric acid yang lebih tinggi cenderung ditemukan pada *wine* berkualitas lebih baik. 
+- Volatile acidity : Anggur dengan kesamaan volatile yang lebih rendah cenderung memiliki quality yang lebih baik.
 
 #### 3.5 Correlation Matrix
 
@@ -105,7 +105,7 @@ Gambar 5. Correlation Matrix
 - Alcohol memiliki hubungan negatif antara dencity.
 - Alcohol hampir tidak memiliki hubungan antara fixed acidity, residual sugar, dan free sulfur dioxide. 
 - Volitile acidity memiliki hubungan positif antara pH.
-- Volitile acidity memiliki hubungan negatif antara citric acidity.
+- Volitile acidity memiliki hubungan negatif antara citric acid.
 - Volitile hampir tidak memiliki hubungan antara residual sugar, chloride, free sulfur dioxide dan total sulfur dioxide. 
 - Density memiliki hubungan positif antara fixed acidity.
 - Density memiliki hubungan negatif antara density.
@@ -132,7 +132,7 @@ Boxplot menunjukkan adanya outlier pada beberapa fitur. Seperti pada fitur alcoh
    - Langkah ini bertujuan untuk mengidentifikasi dan menghapus outlier pada fitur-fitur yang memiliki korelasi kuat dengan target variabel yaitu `quality`.
    - Pertama, korelasi dihitung setiap fitur dengan `quality`, dan fitur-fitur dengan korelasi absolut lebih dari 0,2 dipilih `cols_select`. Fitur `quality` sendiri dihapus dari daftar ini.
    - Kemudian, untuk setiap fitur dalam `cols_select`, dihitung nilai kuartil ` (Q1), kuartil 3 (Q3), dan interquartile range (IQR).
-   - Outlier diidentifikasi sebagai data yang berada di bawah `Q1 - 1,5 * IQR` atau di atas `Q3 + 1,5 * IQR`.
+   - Outlier diidentifikasi sebagai data yang berada di bawah Q1 - 1,5 * IQR atau di atas Q3 + 1,5 * IQR.
    - Baris-baris yang mengandung outlier pada fitur-fitur yang dipilih tersebut dihapus dari `df_cleaned`
 5. Transformasi Variabel Quality :
    - Kolom `quality` diubah menjadi data kategorikal menggunakan `pd.cut()`. Data dibagi ke dalam 3 kategori berdasarkan rentang nilai : `'buruk' (0-4), 'sedang' (4-6), dan 'baik' (6-10)`.
@@ -146,65 +146,42 @@ Boxplot menunjukkan adanya outlier pada beberapa fitur. Seperti pada fitur alcoh
   
 ## 5. Modelling
 
-Algoritma yang digunakan dalam data latih ini yaitu Random Forest, Support Vector Machine (SVM) dan K-Nearest Neighbor (KNN). Dari algoritma yang digunakan bertujuan untuk mendapatkan model terbaik dengan membandingkan masing-masing hasil yang diperoleh untuk dapat melakukan prediksi dengan tingkat akurasi tertinggi terhadap kualitas yang ada pada *red wine* dan memprediksi kandungan yang terdapat pada *red wine* seberapa berpengaruhnya. 
+Algoritma yang digunakan dalam data latih ini yaitu *Random Forest*, *Support Vector Machine (SVM)* dan *K-Nearest Neighbor* (KNN). Dari algoritma yang digunakan bertujuan untuk mendapatkan model terbaik dengan membandingkan masing-masing hasil yang diperoleh untuk dapat melakukan prediksi dengan tingkat akurasi tertinggi terhadap kualitas yang ada pada *red wine* dan memprediksi kandungan yang terdapat pada *red wine* seberapa berpengaruhnya. 
 
-a. Random Forest
+a. *Random Forest*
 
-Algoritma random forest merupakan model ensamble. Algoritma berbasis ensamble merupakan gabungan dari beberapa teknik machine learning yang digabungkan menjadi satu model prediktif [[4]](https://ejournal.pnc.ac.id/index.php/infotekmesin/article/view/1751/514).
+Algoritma *random forest* merupakan model *ensamble*. Algoritma berbasis *ensamble* merupakan gabungan dari beberapa teknik *machine learning* yang digabungkan menjadi satu model prediktif [[4]](https://ejournal.pnc.ac.id/index.php/infotekmesin/article/view/1751/514).
 
-Keunggulan algoritma random forest yaitu [[5]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
+Keunggulan algoritma *random forest* yaitu [[5]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
 - Berjalan secara efisien pada basis data yang besar.
 - Mampu memberikan perkiraan variabel atau atribut yang penting dalam klasifikasi
-- Random forest merupakan salah satu algoritma pembelajaran paling akurat yang tersedia untuk kumpulan data, Random Forest menghasilkan pengklasifikasian yang sangat akurat.
+- *Random forest* merupakan salah satu algoritma pembelajaran paling akurat yang tersedia untuk kumpulan data, *Random Forest* menghasilkan pengklasifikasian yang sangat akurat.
 
-Kelemahan algoritma random forest yaitu [[6]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
- - Random forest cenderung bias pada saat berhadapan dengan variabel kategorikal.
+Kelemahan algoritma *random forest* yaitu [[6]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
+ - *Random forest* cenderung bias pada saat berhadapan dengan variabel kategorikal.
  - Waktu komputasi pada dataset berskala besar relatif lambat.
- - Lebih banyak sumber daya komputasi diperlukan untuk mengimplementasikan algoritma random forest.
+ - Lebih banyak sumber daya komputasi diperlukan untuk mengimplementasikan algoritma *random forest*.
 
-  Pengujian yang dilakukan pada model Random Forest mendapatkan hasil sebagai pada tabel berikut :
-
-| Evaluasi    | Keterangan |
-|-----------|------------|
-|  **Accuracy** | 0.87   |
-| **Precission**| 0.83   |
-| **Recall**    | 0.87   |
-| **F1-Score**  | 0.85   |
-
-Tabel 3. Random Forest
-
-b. Support Vector Machine (SVM)
+b. *Support Vector Machine* (SVM)
 
 SVM terkenal sebagai algoritma yang dapat menangani data dengan dimensi tinggi dan bekerja baik pada kasus dengan jumlah sample yang lebih kecil dibandingkan dengan dimensi fitur. Tujuan dari algoritma SVM ialah untuk menemukan hyperplane terbaik dalam ruang berdimensi-N yang berfungsi sebagai pemisah yang jelas bagi titik-titik data input [[7]](https://books.google.co.id/books?id=CzheEQAAQBAJ&newbks=0&printsec=frontcover&pg=PA58&dq=algoritma+support+vector+machine&hl=id&source=newbks_fb&redir_esc=y#v=onepage&q=algoritma%20support%20vector%20machine&f=true).
 
 Keunggulan algoritma SVM [[8]](https://www.google.co.id/books/edition/Teori_Dan_Implementasi_Machine_Learning/GNJNEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+svm&pg=PA30&printsec=frontcover)yaitu :
-
 - Cocok untuk ruang dimensi tinggi.
-- Hemat memori, karena menggunakan training point dari fungsi keputusan (support vector).
+- Hemat memori, karena menggunakan training point dari fungsi keputusan (*support vector*).
 - Bekerja relatif baik ketika ada margin pemisahan yang jelas antar kelas.
 
 Kelemahan algoritma SVM [[9]](https://www.google.co.id/books/edition/Teori_Dan_Implementasi_Machine_Learning/GNJNEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+svm&pg=PA30&printsec=frontcover) yaitu :
-
 - Algoritma SVM tidak cocok untuk dataset dalam jumlah yang besar karena membuatuhkan waktu training yang lama.
 - Jika jumlah fitur untuk setiap titik data melebihi jumlah sampel data training, SVM akan memiliki performa yang kurang baik.
-- SVM tidak bekerja dengan baik ketika dataset memiliki lebih banyak noise misalknya kelas target terjadi tumpang tindih. 
+- SVM tidak bekerja dengan baik ketika dataset memiliki lebih banyak noise misalnya kelas target terjadi tumpang tindih. 
 
-| Evaluasi    | Keterangan |
-|-----------|------------|
-|  **Accuracy** | 0.86   |
-| **Precission**| 0.74   |
-| **Recall**    | 0.86   |
-| **F1-Score**  | 0.79   |
-
-Tabel 4. SVM
-
-c. K-Nearest Neighbor (KNN)
+c. *K-Nearest Neighbor* (KNN)
 
 KNN merupakan metode klasifikasi terhadap objek baru berdasarkan data training yang memiliki jarak tetangga terdekat (nearest neighbor) dengan objek baru tersebut [[10]](https://books.google.co.id/books?id=CzheEQAAQBAJ&newbks=0&printsec=frontcover&pg=PA58&dq=algoritma+support+vector+machine&hl=id&source=newbks_fb&redir_esc=y#v=onepage&q=algoritma%20support%20vector%20machine&f=true). 
 
 Keunggulan algoritma KNN [[11]](https://www.google.co.id/books/edition/Data_Sebagai_Fondasi_Kecerdasan_Buatan/GLgFEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+knn&pg=PA131&printsec=frontcover) yaitu :
-
-- Mudah diterapkan karena KNN merupakan salah satu metode yang paling sederhana dalam machine learning.
+- Mudah diterapkan karena KNN merupakan salah satu metode yang paling sederhana dalam *machine learning*.
 - KNN cocok untuk masalah klasifikasi dan regresi nonlinier karena dapat menangani hubungan nonlinier antara fitur dan target.
 - KNN cenderung memberikan hasil yang baik untuk dataset kecil yang tidak memiliki banyak dimensi.
 
@@ -213,19 +190,10 @@ Kelemahan algoritma KNN [[12]](https://www.google.co.id/books/edition/Data_Sebag
 - Kinerja yang buruk untuk fitur-fitur pada skala yang berbeda.
 - KNN memerlukan memori yang besar karena perlu menyimpan seluruh dataset yang dilatih. 
 
-| Evaluasi     | Keterangan |
-|-----------|------------|
-|  **Accuracy** | 0.84 |
-| **Precission**| 0.81 |
-| **Recall**    | 0.84 |
-| **F1-Score**  | 0.82 |
-
-Tabel 5. KNN
-
 ## 6. Evaluation
 
-Selanjutnya dilakukan analisis hasil evaluasi kinerja model melalui confussion matrix. Hail evaluasi meliputi nilai : 
-- True Positive (TP) yang merupakan jumlah kasus positif yang diprediksi denganbenar oleh model, yang artinya model mengidentifikasi kasus positif secara akurat.
+Selanjutnya dilakukan analisis hasil evaluasi kinerja model melalui *confussion matrix*. Hasil evaluasi meliputi nilai : 
+- True Positive (TP) yang merupakan jumlah kasus positif yang diprediksi dengan benar oleh model, yang artinya model mengidentifikasi kasus positif secara akurat.
 - True Negative (TN) merupakan jumlah kasus negatif yang diprediksi dengan benar oleh model, yang artinya model mengidentifikasi kasus negatif secara akurat.
 - False Positive (FP) merupakan jumlah kasus negatif yang diprediksi secara salah oleh model sebagai positif.
 - False Negative (FN) merupakan jumlah kasus positif yang diprediksi secara salah oleh model sebagai negatif.
