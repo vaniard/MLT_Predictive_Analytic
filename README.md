@@ -96,15 +96,19 @@ Gambar 3.5 Correlation Matrix
 
 - Quality memiliki hubungan positif antara alcohol.
 - Quality memiliki hubungan negatif lemah antara volitile acidity.
-- Quality tidak memiliki hubungan antara residual sugar, free sulfur dioxide, dan  pH.
+- Quality hampir tidak memiliki hubungan antara residual sugar, free sulfur dioxide, dan  pH.
 - Alcohol memiliki hubungan positif antara quality dan pH.
 - Alcohol memiliki hubungan negatif antara dencity.
+- Alcohol hampir tidak memiliki hubungan antara fixed acidity, residual sugar, dan free sulfur dioxide. 
 - Volitile acidity memiliki hubungan positif antara pH.
 - Volitile acidity memiliki hubungan negatif antara citric acidity.
+- Volitile hampir tidak memiliki hubungan antara residual sugar, chloride, free sulfur dioxide dan total sulfur dioxide. 
 - Density memiliki hubungan positif antara fixed acidity.
 - Density memiliki hubungan negatif antara density.
+- Density hampir tidak memiliki hubungan antara volitile acidity, free sulfur dioxide dan total sulfur dioxide. 
 - Citric acid memiliki hubungan positif antara fixed acidity.
 - Citric acid memiliki hubungan negatif antara volitile acidity dan pH.
+- Citric acid hampir tidak memiliki hubungan antara residual sugar, free sulfur dioxide dan total sulfu dioxide. 
 
 #### 3.6 Memeriksa Outlier
 
