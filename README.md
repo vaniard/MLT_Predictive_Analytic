@@ -14,13 +14,13 @@ Pada penelitian ini yang dilakukan terhadap dataset *Red Wine Quality* dengan me
 ### 2.1 Problem Statements 
 
 1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
-2. Kandungan apa yang paling berpengaruh terhadap kualitas dari *red wine*?
-3. Bagaimana membangun sistem prediktif yang mampu mengklasifikasikan *red wine* berdasarkan komposisi atau bahan dengan akurasi yang dapat diandalkan?
+2. Fitur atau kandungan apa yang paling mempengaruhi kualitas *red wine*?
+3. Algoritma klasifikasi apa yang memberikan performa terbaik untuk memprediksi kualitas *red wine*?
 
 ### 2.2 Goals
 1. Mengembangkan model *machine learning* yang dapat memprediksi kualitas *red wine* yang dinilai pada skala 0 sampai 10. 
-2. Memberikan wawasan bagi pembuat *wine* untuk mengoptimalkan produksi dan meningkatkan kontrol kualitas. 
-3. Membuat dan membandingkan beberapa algoritma klasifikasi seperti *Random Forest*, *Support Vector Machine* (SVM) dan *K-Nearest Neighbor* (KNN).
+2. Mengidentifikasi dan menganalisis fitur-fitur yang paling signifikan terhadap kualitas *red wine*.
+3. Membandingkan performa beberapa algoritma seperti *Random Forest*, *SVM*, *K-Nearest Neighbor (KNN)* untuk menentukan model terbaik dalam memprediksi kualitas *red wine*.
 
 ### 2.3 Solution Statement 
 1. Melakukan analisis data eksplorasi untuk melakukan hubungan antara fitur dan kualitas.
@@ -46,11 +46,11 @@ Tabel 1. Informasi Dataset
 
 Dataset yang digunakan berasal dari kaggle tentang *Red Wine Quality* dari anggur *Vinho Verde* Portugal. Terdapat 1.599 baris dengan 12 kolom yang terdiri dari fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol dan quality. Pada dataset tersebut memiliki input dan output yang menetapkan nilai kualitasnya mulai dari angka 3 yang berarti buruk dan angka 8 merupakan sangat baik.
 
-<t> ![image](https://github.com/user-attachments/assets/c8f9c722-7d86-4e80-97ca-907cf50b75e1) </t> 
+![image](https://github.com/user-attachments/assets/c8f9c722-7d86-4e80-97ca-907cf50b75e1) 
 
 Gambar 1 Informasi Dataset
 
-<t> ![image](https://github.com/user-attachments/assets/24e1d54d-d5e2-4610-915c-5e8653339e0d) </t>
+![image](https://github.com/user-attachments/assets/24e1d54d-d5e2-4610-915c-5e8653339e0d)
 
 Gambar 2 Sampel Dataset
 
@@ -152,6 +152,16 @@ a. *Random Forest*
 
 Algoritma *random forest* merupakan model *ensamble*. Algoritma berbasis *ensamble* merupakan gabungan dari beberapa teknik *machine learning* yang digabungkan menjadi satu model prediktif [[4]](https://ejournal.pnc.ac.id/index.php/infotekmesin/article/view/1751/514).
 
+Library : `sklearn.ensemble.RandomForestClassifier`
+
+Parameter yang digunakan : 
+- `n_estimators` , Jumlah pohon keputusan. 
+- `max_depth` , Kedalaman maksimum tiap pohon untuk membatasi overfitting.
+- `random_state` , Menjamin reprodusibilitas hasil.
+- `criterion` , Berfungsi untuk mengukur kualitas split.
+- `min_samples_split` , Jumlah minimum sampel yang dibutuhkan untuk membagi node internal.
+- `min_samples_leaf` , Jumlah minimum sampel pada daun (leaf node).
+
 Keunggulan algoritma *random forest* yaitu [[5]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
 - Berjalan secara efisien pada basis data yang besar.
 - Mampu memberikan perkiraan variabel atau atribut yang penting dalam klasifikasi
@@ -166,6 +176,13 @@ b. *Support Vector Machine* (SVM)
 
 SVM terkenal sebagai algoritma yang dapat menangani data dengan dimensi tinggi dan bekerja baik pada kasus dengan jumlah sample yang lebih kecil dibandingkan dengan dimensi fitur. Tujuan dari algoritma SVM ialah untuk menemukan hyperplane terbaik dalam ruang berdimensi-N yang berfungsi sebagai pemisah yang jelas bagi titik-titik data input [[7]](https://books.google.co.id/books?id=CzheEQAAQBAJ&newbks=0&printsec=frontcover&pg=PA58&dq=algoritma+support+vector+machine&hl=id&source=newbks_fb&redir_esc=y#v=onepage&q=algoritma%20support%20vector%20machine&f=true).
 
+Library : `sklearn.svm.SVC`
+
+Parameter yang digunakan : 
+- `kernel`, Berfungsi untuk memetakan input ke ruang berdimensi lebih tinggi.
+- `C` , Merupakan parameter regulasi.
+- `gamma` , Mengontrol jarak pengaruh satu titik data.
+
 Keunggulan algoritma SVM [[8]](https://www.google.co.id/books/edition/Teori_Dan_Implementasi_Machine_Learning/GNJNEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+svm&pg=PA30&printsec=frontcover)yaitu :
 - Cocok untuk ruang dimensi tinggi.
 - Hemat memori, karena menggunakan training point dari fungsi keputusan (*support vector*).
@@ -179,6 +196,14 @@ Kelemahan algoritma SVM [[9]](https://www.google.co.id/books/edition/Teori_Dan_I
 c. *K-Nearest Neighbor* (KNN)
 
 KNN merupakan metode klasifikasi terhadap objek baru berdasarkan data training yang memiliki jarak tetangga terdekat (nearest neighbor) dengan objek baru tersebut [[10]](https://books.google.co.id/books?id=CzheEQAAQBAJ&newbks=0&printsec=frontcover&pg=PA58&dq=algoritma+support+vector+machine&hl=id&source=newbks_fb&redir_esc=y#v=onepage&q=algoritma%20support%20vector%20machine&f=true). 
+
+Library : `sklearn.neighbors.KNeighborsClassifier`
+
+Parameter yang digunakan :
+- `n_neighbors` , Jumlah tetangga terdekat yang dipertimbangkan dalam klasifikasi.
+- `weights` , Untuk memberikan bobot yang sama untuk tetangga.
+- `metric` , Metode pengukuran jarak. Pada umumnya mengarah ke Euclidean distance saat `p=2`.
+- `p=2` , Parameter daya pada metrik Minkowski. 
 
 Keunggulan algoritma KNN [[11]](https://www.google.co.id/books/edition/Data_Sebagai_Fondasi_Kecerdasan_Buatan/GLgFEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+knn&pg=PA131&printsec=frontcover) yaitu :
 - Mudah diterapkan karena KNN merupakan salah satu metode yang paling sederhana dalam *machine learning*.
@@ -197,6 +222,20 @@ Selanjutnya dilakukan analisis hasil evaluasi kinerja model melalui *confussion 
 - True Negative (TN) merupakan jumlah kasus negatif yang diprediksi dengan benar oleh model, yang artinya model mengidentifikasi kasus negatif secara akurat.
 - False Positive (FP) merupakan jumlah kasus negatif yang diprediksi secara salah oleh model sebagai positif.
 - False Negative (FN) merupakan jumlah kasus positif yang diprediksi secara salah oleh model sebagai negatif.
+
+Evaluasi Terhadap Probelem Statements 
+
+1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
+   
+Berdasarkan ketiga model yang telah dibangun dan dievaluasi, hasil terbaik ditunjukkan oleh **Random Forest** dengan akurasi 87%. Hal ini menunjukkan bahwa sistem prediktif yang dibangun dan bekerja dengan baik dalam mengklasifikasikan kualitas *red wine*. 
+
+2. Fitur atau kandungan apa yang paling mempengaruhi kualitas *red wine*?
+
+Melalui analisis korelasi dan evaluasi fitur, ditemukan bahwa fitur seperti **alcohol, volatile acidity, dan sulphates** memiliki pengaruh yang signifikan terhadap kualitas *red wine*. Alcohol juga memiliki korelasi positif yang kuat terhadap qualiy. 
+
+3. Algoritma klasifikasi apa yang memberikan performa terbaik untuk memprediksi kualitas *red wine*?
+
+Berdasarkan evaluasi accuracy, **Random Forest** terbukti sebagai model terbaik dibandingkan SVM dan KNN. 
 
 ![image](https://github.com/user-attachments/assets/2cc16ef4-36a1-4ae8-891f-9b2f61a4a711)
 
@@ -223,6 +262,14 @@ Dari ketiga model yang dibandingkan
 - KNN Model dengan accuracy score terendah diantara ketiganya yaitu 0.8425
 
 Maka dari itu, jika matrik utama adalah accuracy, maka Random Forest Model adalah yang paling baik diantara ketiga model ini pada dataset yang diuji.
+
+### Kesimpulan 
+
+Model yang dikembangkan secara langsung menjawab seluruh problem statemens, mencapai semua goals yang ditetapkan, dan menerapkan solusi yang efektif dan berdampak. Hasil prediksi yang akurat dan analisis fitur yang relevan dapat membantu produsen *red wine* dalam hal : 
+- Mengomptimalkan formula produk untuk kualitas yang lebih tinggi.
+- Meningkatkan efisiensi proses produksi.
+- Mempertahankan konsistensi mutu produk di pasar.
+Dengan demikian, hal ini dapat memberikan nilai bisnis nyata bagi industri *wine*. 
 
 ## Referensi 
 
