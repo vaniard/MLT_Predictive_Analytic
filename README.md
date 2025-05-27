@@ -223,20 +223,6 @@ Selanjutnya dilakukan analisis hasil evaluasi kinerja model melalui *confussion 
 - False Positive (FP) merupakan jumlah kasus negatif yang diprediksi secara salah oleh model sebagai positif.
 - False Negative (FN) merupakan jumlah kasus positif yang diprediksi secara salah oleh model sebagai negatif.
 
-Evaluasi Terhadap Probelem Statements 
-
-1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
-   
-Berdasarkan ketiga model yang telah dibangun dan dievaluasi, hasil terbaik ditunjukkan oleh **Random Forest** dengan akurasi 87%. Hal ini menunjukkan bahwa sistem prediktif yang dibangun dan bekerja dengan baik dalam mengklasifikasikan kualitas *red wine*. 
-
-2. Fitur atau kandungan apa yang paling mempengaruhi kualitas *red wine*?
-
-Melalui analisis korelasi dan evaluasi fitur, ditemukan bahwa fitur seperti **alcohol, volatile acidity, dan sulphates** memiliki pengaruh yang signifikan terhadap kualitas *red wine*. Alcohol juga memiliki korelasi positif yang kuat terhadap qualiy. 
-
-3. Algoritma klasifikasi apa yang memberikan performa terbaik untuk memprediksi kualitas *red wine*?
-
-Berdasarkan evaluasi accuracy, **Random Forest** terbukti sebagai model terbaik dibandingkan SVM dan KNN. 
-
 ![image](https://github.com/user-attachments/assets/2cc16ef4-36a1-4ae8-891f-9b2f61a4a711)
 
 Accuracy adalah persentase total prediksi yang benar dari semua prediksi yang dibuat oleh model. 
@@ -250,6 +236,48 @@ Berikut hasil accuracy 3 model algoritma :
 | **KNN**            | 0.84 |
 
 Tabel 6. Hasil Accuracy
+
+#### Evaluasi Terhadap Probelem Statements 
+
+1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
+
+   Berdasarkan ketiga model yang telah dibangun dan dievaluasi, hasil terbaik ditunjukkan oleh **Random Forest** dengan akurasi 87%. Hal     ini menunjukkan bahwa sistem prediktif yang dibangun dan bekerja dengan baik dalam mengklasifikasikan kualitas *red wine*. 
+
+2. Fitur atau kandungan apa yang paling mempengaruhi kualitas *red wine*?
+
+   Melalui analisis korelasi dan evaluasi fitur, ditemukan bahwa fitur seperti **alcohol, volatile acidity, dan sulphates** memiliki         pengaruh yang signifikan terhadap kualitas *red wine*. Alcohol juga memiliki korelasi positif yang kuat terhadap quality. 
+
+3. Algoritma klasifikasi apa yang memberikan performa terbaik untuk memprediksi kualitas *red wine*?
+  
+   Berdasarkan evaluasi accuracy, **Random Forest** terbukti sebagai model terbaik dibandingkan SVM dan KNN. 
+
+#### Evaluasi Terhadap Goals 
+
+1. Mengembangkan model machine learning yang dapat memprediksi kualitas red wine yang dinilai pada skala 0 sampai 10.
+
+   Model klasifikasi telah berhasil dikembangkan dengan hasil akurasi yang baik yaitu 87%. 
+
+2. Mengidentifikasi fitur paling berpengaruh terhadap kualitas *red wine*.
+
+   Analisis data dan korelasi fitur berhasil menunjukkan fitur utama yang berpengaruh terhadap kualitas untuk mendukung pengambilan          keputusan bagi produsen *red wine*.
+
+3. Membandingkan algoritma klasifikasi untuk menentukan model terbaik.
+
+   Perbandingan algoritma antara *Random Forest*, SVM, dan KNN telah dilakukan dengan hasil evaluasi yang mendalam.
+
+#### Evaluasi Terhadap Solution Statements 
+
+1. Melakukan analisis data eksplorasi untuk melakukan hubungan antara fitur dan kualitas
+
+   Analisis univariate, bivariate, confussion matrix dan outlier memberikan informasi tentang hubungan antara fitur dan kualitas.
+
+2. Menggunakan analisis fitur untuk menyoroti faktor-faktor utama yang mendorong kualitas *red wine*
+
+   Fitur seperti alcohol, volatile acidity, dan sulphates terbukti secara statistik berkorelasi dengan quality, hal ini menjadikan solusi    menjadi berdampak.
+
+3. Melatih dan mengevaluasi model klasifikasi *Random Forest*, *Support Vector Machine* (SVM), dan *K-Nearest Neighhbor* (KNN). Dan menggunakan metrik evaluasi seperti *accuracy*
+
+   Model telah dilatih dan dievaluasi dengan metrik accuracy dan confussion matrix, kemudian hasilnya menunjukkan bahwa solusi ini tepat untuk    memilih model terbaik. 
 
 ![image](https://github.com/user-attachments/assets/a35c0d69-7ef0-47bd-ad89-937837558ac5)
 
@@ -269,7 +297,8 @@ Model yang dikembangkan secara langsung menjawab seluruh problem statemens, menc
 - Mengomptimalkan formula produk untuk kualitas yang lebih tinggi.
 - Meningkatkan efisiensi proses produksi.
 - Mempertahankan konsistensi mutu produk di pasar.
-Dengan demikian, hal ini dapat memberikan nilai bisnis nyata bagi industri *wine*. 
+  
+Dengan demikian, hal ini dapat memberikan nilai bisnis yang nyata bagi industri *wine*. 
 
 ## Referensi 
 
