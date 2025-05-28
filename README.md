@@ -155,12 +155,12 @@ Algoritma *random forest* merupakan model *ensamble*. Algoritma berbasis *ensamb
 Library : `sklearn.ensemble.RandomForestClassifier`
 
 Parameter yang digunakan : 
-- `n_estimators` , Jumlah pohon keputusan. 
-- `max_depth` , Kedalaman maksimum tiap pohon untuk membatasi overfitting.
-- `random_state` , Menjamin reprodusibilitas hasil.
-- `criterion` , Berfungsi untuk mengukur kualitas split.
-- `min_samples_split` , Jumlah minimum sampel yang dibutuhkan untuk membagi node internal.
-- `min_samples_leaf` , Jumlah minimum sampel pada daun (leaf node).
+- `n_estimators=100` , Jumlah pohon keputusan. 
+- `max_depth=10` , Kedalaman maksimum tiap pohon untuk membatasi overfitting.
+- `random_state=42` , Menjamin reprodusibilitas hasil.
+- `criterion=gini` , Berfungsi untuk mengukur kualitas split.
+- `min_samples_split=2` , Jumlah minimum sampel yang dibutuhkan untuk membagi node internal.
+- `min_samples_leaf=1` , Jumlah minimum sampel pada daun (leaf node).
 
 Keunggulan algoritma *random forest* yaitu [[5]](https://www.google.co.id/books/edition/Algoritma_Klasifikasi_untuk_Pemula_Solus/y84TEQAAQBAJ?hl=id&gbpv=1&dq=random+forest&pg=PA51&printsec=frontcover) :
 - Berjalan secara efisien pada basis data yang besar.
@@ -179,9 +179,9 @@ SVM terkenal sebagai algoritma yang dapat menangani data dengan dimensi tinggi d
 Library : `sklearn.svm.SVC`
 
 Parameter yang digunakan : 
-- `kernel`, Berfungsi untuk memetakan input ke ruang berdimensi lebih tinggi.
-- `C` , Merupakan parameter regulasi.
-- `gamma` , Mengontrol jarak pengaruh satu titik data.
+- `kernel=rbf`, Berfungsi untuk memetakan input ke ruang berdimensi lebih tinggi.
+- `C=1.0` , Merupakan parameter regulasi.
+- `gamma='scale` , Mengontrol jarak pengaruh satu titik data.
 
 Keunggulan algoritma SVM [[8]](https://www.google.co.id/books/edition/Teori_Dan_Implementasi_Machine_Learning/GNJNEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+svm&pg=PA30&printsec=frontcover)yaitu :
 - Cocok untuk ruang dimensi tinggi.
@@ -200,9 +200,9 @@ KNN merupakan metode klasifikasi terhadap objek baru berdasarkan data training y
 Library : `sklearn.neighbors.KNeighborsClassifier`
 
 Parameter yang digunakan :
-- `n_neighbors` , Jumlah tetangga terdekat yang dipertimbangkan dalam klasifikasi.
-- `weights` , Untuk memberikan bobot yang sama untuk tetangga.
-- `metric` , Metode pengukuran jarak. Pada umumnya mengarah ke Euclidean distance saat `p=2`.
+- `n_neighbors=5` , Jumlah tetangga terdekat yang dipertimbangkan dalam klasifikasi.
+- `weights=uniform` , Untuk memberikan bobot yang sama untuk tetangga.
+- `metric=minkowski` , Metode pengukuran jarak. Pada umumnya mengarah ke Euclidean distance saat `p=2`.
 - `p=2` , Parameter daya pada metrik Minkowski. 
 
 Keunggulan algoritma KNN [[11]](https://www.google.co.id/books/edition/Data_Sebagai_Fondasi_Kecerdasan_Buatan/GLgFEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+knn&pg=PA131&printsec=frontcover) yaitu :
