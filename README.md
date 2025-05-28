@@ -319,7 +319,7 @@ F-1 Score
 *   KNN berada di posisi kedua dengan score 0.8295.
 *   SVM dengan score 0.7984. 
 
-Berdasarkan perbandingan keempat metrik evaluasi, **Random Forest** merupakan model yang paling unggul di antaranya keempatnya. Model ini tidak hanya memiliki akurasi yang tinggi tetapi juga menunjukkan keseimbangaan terbaik antara Precision, Recall dan F-1 score. Maka dari itu, **Random Forest** adalah model terbaik untuk memprediksi kualitas anggur berdasarkan hasil evaluasi yang dilakukan. 
+Berdasarkan perbandingan keempat metrik evaluasi, **Random Forest** merupakan model yang paling unggul di antaranya ketiganya. Model ini tidak hanya memiliki akurasi yang tinggi tetapi juga menunjukkan keseimbangaan terbaik antara Precision, Recall dan F-1 score. Maka dari itu, **Random Forest** adalah model terbaik untuk memprediksi kualitas anggur berdasarkan hasil evaluasi yang dilakukan. 
 
 
 
