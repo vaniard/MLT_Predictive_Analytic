@@ -25,7 +25,7 @@ Pada penelitian ini yang dilakukan terhadap dataset *Red Wine Quality* dengan me
 ### 2.3 Solution Statement 
 1. Melakukan analisis data eksplorasi untuk melakukan hubungan antara fitur dan kualitas.
 2. Menggunakan analisis fitur untuk menyoroti faktor-faktor utama yang mendorong kualitas *wine*.
-3. Melatih dan mengevaluasi model klasifikasi *Random Forest*, *Support Vector Machine* (SVM), dan *K-Nearest Neighhbor* (KNN). Dan menggunakan metrik evaluasi seperti *accuracy*.
+3. Melatih dan mengevaluasi model klasifikasi *Random Forest*, *Support Vector Machine* (SVM), dan *K-Nearest Neighhbor* (KNN). Dan menggunakan metrik evaluasi seperti *accuracy*, *precision*, *recall* dan *f1-score*.
 
 ## 3. Data Understanding
 
@@ -158,7 +158,7 @@ Parameter yang digunakan :
 - `n_estimators=100` , Jumlah pohon keputusan. 
 - `max_depth=10` , Kedalaman maksimum tiap pohon untuk membatasi overfitting.
 - `random_state=42` , Menjamin reprodusibilitas hasil.
-- `criterion=gini` , Berfungsi untuk mengukur kualitas split.
+- `criterion='gini'` , Berfungsi untuk mengukur kualitas split.
 - `min_samples_split=2` , Jumlah minimum sampel yang dibutuhkan untuk membagi node internal.
 - `min_samples_leaf=1` , Jumlah minimum sampel pada daun (leaf node).
 
@@ -179,9 +179,9 @@ SVM terkenal sebagai algoritma yang dapat menangani data dengan dimensi tinggi d
 Library : `sklearn.svm.SVC`
 
 Parameter yang digunakan : 
-- `kernel=rbf`, Berfungsi untuk memetakan input ke ruang berdimensi lebih tinggi.
+- `kernel='rbf'`, Berfungsi untuk memetakan input ke ruang berdimensi lebih tinggi.
 - `C=1.0` , Merupakan parameter regulasi.
-- `gamma='scale` , Mengontrol jarak pengaruh satu titik data.
+- `gamma='scale'` , Mengontrol jarak pengaruh satu titik data.
 
 Keunggulan algoritma SVM [[8]](https://www.google.co.id/books/edition/Teori_Dan_Implementasi_Machine_Learning/GNJNEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+svm&pg=PA30&printsec=frontcover)yaitu :
 - Cocok untuk ruang dimensi tinggi.
@@ -201,8 +201,8 @@ Library : `sklearn.neighbors.KNeighborsClassifier`
 
 Parameter yang digunakan :
 - `n_neighbors=5` , Jumlah tetangga terdekat yang dipertimbangkan dalam klasifikasi.
-- `weights=uniform` , Untuk memberikan bobot yang sama untuk tetangga.
-- `metric=minkowski` , Metode pengukuran jarak. Pada umumnya mengarah ke Euclidean distance saat `p=2`.
+- `weights='uniform'` , Untuk memberikan bobot yang sama untuk tetangga.
+- `metric='minkowski'` , Metode pengukuran jarak. Pada umumnya mengarah ke Euclidean distance saat `p=2`.
 - `p=2` , Parameter daya pada metrik Minkowski. 
 
 Keunggulan algoritma KNN [[11]](https://www.google.co.id/books/edition/Data_Sebagai_Fondasi_Kecerdasan_Buatan/GLgFEQAAQBAJ?hl=id&gbpv=1&dq=kelebihan+dan+kekurangan+algoritma+knn&pg=PA131&printsec=frontcover) yaitu :
@@ -227,13 +227,25 @@ Selanjutnya dilakukan analisis hasil evaluasi kinerja model melalui *confussion 
 
 Accuracy adalah persentase total prediksi yang benar dari semua prediksi yang dibuat oleh model. 
 
+![image](https://github.com/user-attachments/assets/4f2c3be0-48e8-42dd-8101-0103ab72289b)
+
+Precision menunjukkan persentase kasus positif yang diprediksi dengan benar dari semua prediksi positif yang dibuat oleh model. 
+
+![image](https://github.com/user-attachments/assets/92590333-de3f-4b38-9c78-5c7fa577c169)
+
+Recall (Sensitivitas atau True Positif Rate) merupakan persentase kasus positif yang diidentifikasi dengan benar oleh model dari semua kasus positif yang sebenarnya.
+
+![image](https://github.com/user-attachments/assets/28bce124-270c-4a19-82c8-400d6aae9b7e)
+
+F1-Score merupakan rata-rata harmoni precision dan recall. F1-score memberikan keseimbangan antara kedua metrik tersebut dan berguna jika terjadi ketidakseimbangan kelas. 
+
 Berikut hasil accuracy 3 model algoritma : 
 
-| Model    | Accuracy |
-|-----------|------------|
-|  **Random Forest** | 0.87 |
-| **SVM**            | 0.86 |
-| **KNN**            | 0.84 |
+| Model    | Accuracy | Pricision | Recall | F1-Score |
+|-----------|------------|------------|------------|------------|
+|  **Random Forest** | 0.87 | 0.8381 | 0.878  | 0.8532 |
+| **SVM**            | 0.86 | 0.7434 | 0.8622 | 0.7984 |
+| **KNN**            | 0.84 | 0.8177 | 0.8425 | 0.8295 |
 
 Tabel 6. Hasil Accuracy
 
@@ -241,25 +253,25 @@ Tabel 6. Hasil Accuracy
 
 1. Bagaimana memprediksi kualitas *red wine* berdasarkan komposisi yang ada di dalamnya?
 
-   Berdasarkan ketiga model yang telah dibangun dan dievaluasi, hasil terbaik ditunjukkan oleh **Random Forest** dengan akurasi 87%. Hal     ini menunjukkan bahwa sistem prediktif yang dibangun dan bekerja dengan baik dalam mengklasifikasikan kualitas *red wine*. 
+   Berdasarkan ketiga model yang telah dibangun dan dievaluasi, hasil terbaik ditunjukkan oleh **Random Forest** dengan akurasi 87%, precision 0.83%, recall 0.87% dan f1-score 0.85%.       Hal ini menunjukkan bahwa sistem prediktif yang dibangun dan bekerja dengan baik dalam mengklasifikasikan kualitas *red wine*. 
 
 2. Fitur atau kandungan apa yang paling mempengaruhi kualitas *red wine*?
 
-   Melalui analisis korelasi dan evaluasi fitur, ditemukan bahwa fitur seperti **alcohol, volatile acidity, dan sulphates** memiliki         pengaruh yang signifikan terhadap kualitas *red wine*. Alcohol juga memiliki korelasi positif yang kuat terhadap quality. 
+   Melalui analisis korelasi dan evaluasi fitur, ditemukan bahwa fitur seperti **alcohol, volatile acidity, dan sulphates** memiliki pengaruh yang signifikan terhadap kualitas *red         wine*. Alcohol juga memiliki korelasi positif yang kuat terhadap quality. 
 
 3. Algoritma klasifikasi apa yang memberikan performa terbaik untuk memprediksi kualitas *red wine*?
   
-   Berdasarkan evaluasi accuracy, **Random Forest** terbukti sebagai model terbaik dibandingkan SVM dan KNN. 
+   Berdasarkan evaluasi accuracy, precision, recall, dan f1-score **Random Forest** terbukti sebagai model terbaik dibandingkan SVM dan KNN. 
 
 #### Evaluasi Terhadap Goals 
 
 1. Mengembangkan model machine learning yang dapat memprediksi kualitas red wine yang dinilai pada skala 0 sampai 10.
 
-   Model klasifikasi telah berhasil dikembangkan dengan hasil akurasi yang baik yaitu 87%. 
+   Model klasifikasi telah berhasil dikembangkan dengan hasil akurasi yang baik yaitu 87%, precision 0.83%, recall 0.87% dan f1-score 0.85%.
 
 2. Mengidentifikasi fitur paling berpengaruh terhadap kualitas *red wine*.
 
-   Analisis data dan korelasi fitur berhasil menunjukkan fitur utama yang berpengaruh terhadap kualitas untuk mendukung pengambilan          keputusan bagi produsen *red wine*.
+   Analisis data dan korelasi fitur berhasil menunjukkan fitur utama yang berpengaruh terhadap kualitas untuk mendukung pengambilan keputusan bagi produsen *red wine*.
 
 3. Membandingkan algoritma klasifikasi untuk menentukan model terbaik.
 
@@ -277,19 +289,41 @@ Tabel 6. Hasil Accuracy
 
 3. Melatih dan mengevaluasi model klasifikasi *Random Forest*, *Support Vector Machine* (SVM), dan *K-Nearest Neighhbor* (KNN). Dan menggunakan metrik evaluasi seperti *accuracy*
 
-   Model telah dilatih dan dievaluasi dengan metrik accuracy dan confussion matrix, kemudian hasilnya menunjukkan bahwa solusi ini tepat untuk    memilih model terbaik. 
+   Model telah dilatih dan dievaluasi dengan metrik accuracy, precision, recall, f1-score dan confussion matrix, kemudian hasilnya menunjukkan bahwa solusi ini tepat untuk memilih model terbaik.
 
-![image](https://github.com/user-attachments/assets/a35c0d69-7ef0-47bd-ad89-937837558ac5)
+Berdasarkan hasil pengujian terhadap data testing, didapatkan hasil sebagai berikut : 
 
-Gambar 6. Perbandingan Accuracy
+![image](https://github.com/user-attachments/assets/58cb9878-528e-47a7-b06a-53230398baf2)
+
+Gambar 6. Perbandingan Accuracy, Precison, Recall dan F1-Score
 
 Dari ketiga model yang dibandingkan
 
-- Random Forest Model menunjukkan performa terbaik dalam hal accuracy score, dengan nilai tertinggi yaitu 0.8780.
-- SVM Model berada pada urutan kedua dengan accuracy score 0.8622.
-- KNN Model dengan accuracy score terendah diantara ketiganya yaitu 0.8425
+Accuracy
+*   Random Forest Model menunjukkan performa terbaik dalam hal accuracy score, dengan nilai tertinggi yaitu 0.8780.
+*   SVM Model berada pada urutan kedua dengan accuracy score 0.8622.
+*   KNN Model dengan accuracy score terendah diantara ketiganya yaitu 0.8425 
 
-Maka dari itu, jika matrik utama adalah accuracy, maka Random Forest Model adalah yang paling baik diantara ketiga model ini pada dataset yang diuji.
+Precision
+*  Random Forest juga menunjukkan precision tertinggi dengan score 0.8381. 
+*  KNN pada urutan kedua dengan score 0.8177. 
+*  SVM dengan score 0.7434 dibagian terendah. 
+
+Recall 
+*   Random Forest juga menunjukkan score Recall tertinggi dengan 0.878. 
+*   SVM berada pada urutan kedua dengan score 0.8622.
+*   KNN diurutan ketiga dengan score 0.8425.
+
+F-1 Score
+*   Random Forest menunjukkan score 0.8532.
+*   KNN berada di posisi kedua dengan score 0.8295.
+*   SVM dengan score 0.7984. 
+
+Berdasarkan perbandingan keempat metrik evaluasi, **Random Forest** merupakan model yang paling unggul di antaranya keempatnya. Model ini tidak hanya memiliki akurasi yang tinggi tetapi juga menunjukkan keseimbangaan terbaik antara Precision, Recall dan F-1 score. Maka dari itu, **Random Forest** adalah model terbaik untuk memprediksi kualitas anggur berdasarkan hasil evaluasi yang dilakukan. 
+
+
+
+
 
 ### Kesimpulan 
 
